@@ -43,11 +43,13 @@ class LoginActivity : AppCompatActivity() {
             val user = FirebaseAuth.getInstance().currentUser
             if (result!!.isNewUser) {
                 val intent = Intent(this, SignActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
             }
             else{
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                 Toast.makeText(this, "User signed in succesfully!", Toast.LENGTH_SHORT).show()
             }
         }

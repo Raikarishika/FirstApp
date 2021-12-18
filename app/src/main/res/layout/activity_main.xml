@@ -21,10 +21,11 @@
         android:id="@+id/signout_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SignOut"
+        android:text="Sign Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="45dp"/>
 
     <Button
         android:id="@+id/main_profile_button"
@@ -33,9 +34,9 @@
         android:text="Profile"
         app:layout_constraintBottom_toTopOf="@+id/signout_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintTop_toBottomOf="@id/recyclerview"
+        />
 
     <TextView
         android:id="@+id/textview_main"
